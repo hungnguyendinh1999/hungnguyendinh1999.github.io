@@ -14,7 +14,7 @@ function App() {
                         className="h-[50px] p-[4px] text-2xl font-medium"
                         href=""
                     >
-                        Hung
+                        Hung Nguyen
                     </a>
 
                     <div
