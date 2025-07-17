@@ -13,9 +13,7 @@ function Hero() {
           </div>
 
           <div className="mt-2 max-w-[450px] p-2 text-justify max-lg:max-w-full">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error
-            adipisci corrupti accusamus reiciendis similique assumenda nostrum
-            fuga dicta vitae ipsum.
+            Aspire to be an AI expert
           </div>
 
           <div className="mt-4 flex items-center gap-4 overflow-hidden p-2">
