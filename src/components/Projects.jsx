@@ -1,6 +1,37 @@
 import React from "react";
 
 function Projects() {
+  const projectData = [
+    {
+      title: "Wildlife Image Classifier",
+      image: "/assets/images/home/photography.jpg",
+      description:
+        "Built a CNN using PyTorch to classify wild animals from camera trap images.",
+      tags: {
+        topics: ["Machine Learning", "Computer Vision"],
+        tech: ["PyTorch", "Python"]
+      }
+    },
+    {
+      title: "Portfolio Website",
+      image: "/assets/images/home/design.jpg",
+      description: "Built my personal site using Vite, React, and Tailwind CSS.",
+      tags: {
+        topics: ["Frontend"],
+        tech: ["React", "Tailwind"]
+      }
+    },
+    {
+      title: "ETL Pipeline for Sales Data",
+      image: "/assets/images/home/editing.jpg",
+      description: "Developed an ETL pipeline to process and store retail sales data into a PostgreSQL database using Apache Airflow.",
+      tags: {
+        topics: ["Data Engineering", "Backend"],
+        tech: ["Python", "PostgreSQL", "Airflow"]
+      }
+    }
+  ];
+  
   return (
     <section className="relative flex min-h-[100vh] w-full max-w-[100vw] flex-col items-center overflow-hidden p-6 py-5">
       <h3 className="text-6xl font-medium max-lg:text-3xl">Projects</h3>
