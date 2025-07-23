@@ -1,4 +1,5 @@
 import React from "react";
+import profileImg from "../assets/images/profile.png";
 
 function Hero() {
     return (
@@ -7,7 +8,8 @@ function Hero() {
                 {/* Left: Text */}
                 <div className="flex flex-col justify-center">
                     <div className="flex flex-wrap text-7xl font-semibold uppercase leading-[85px] max-lg:text-4xl max-md:leading-snug">
-                        <span className="bg-green-200 p-1 px-6">Hung</span>
+                        <span className="bg-green-200 p-1 px-6">Hưng
+                        </span>
                         <br />
                         <span>Software. Data. ML </span>
                     </div>
@@ -37,8 +39,8 @@ function Hero() {
                 <div className="flex w-full max-w-[50%] items-center justify-center overflow-hidden max-lg:max-w-none">
                     <div className="relative flex max-h-[580px] min-h-[450px] min-w-[350px] max-w-[650px] overflow-hidden max-lg:h-fit max-lg:max-h-[320px] max-lg:min-h-[180px] max-lg:w-[320px] max-lg:min-w-[320px]">
                         <img
-                            src="/assets/images/profile.jpg"
-                            alt="app"
+                            src={profileImg}
+                            alt="My profile picture"
                             className="z-[1] h-full w-full object-contain"
                         />
                     </div>

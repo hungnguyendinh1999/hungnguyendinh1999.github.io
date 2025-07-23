@@ -1,11 +1,12 @@
 import React from "react";
+import defaultImg from "../assets/images/default.png"
 
 function ProjectCard({ title, image, description, tags }) {
     return (
         <div className="flex h-fit w-[450px] break-inside-avoid flex-col gap-2 rounded-lg bg-[#f3f3f3b4] p-4 shadow-lg max-lg:w-full max-lg:max-w-[400px]">
             <div className="h-[300px] w-full overflow-hidden rounded-lg">
                 <img
-                    src={image}
+                    src={image ? image : defaultImg}
                     alt={title}
                     className="h-full w-full object-cover"
                 />
@@ -14,7 +15,6 @@ function ProjectCard({ title, image, description, tags }) {
                 <h3 className="text-xl font-medium">{title}</h3>
                 <p className="text-gray-600">{description}</p>
 
-                {/* Topic Tags */}
                 <div className="mt-2 flex flex-wrap gap-2">
                     {tags.topics.map((tag) => (
                         <span
@@ -26,7 +26,6 @@ function ProjectCard({ title, image, description, tags }) {
                     ))}
                 </div>
 
-                {/* Tech Tags */}
                 <div className="mt-1 flex flex-wrap gap-2">
                     {tags.tech.map((tag) => (
                         <span
@@ -49,4 +48,5 @@ function ProjectCard({ title, image, description, tags }) {
         </div>
     );
 }
+
 export default ProjectCard;
