@@ -1,15 +1,31 @@
-import React from "react";
+import React, { useEffect } from "react";
+import gsap from "gsap";
 import profileImg from "../assets/images/profile.png";
 
 function Hero() {
+    useEffect(() => {
+        // Initial reveal for hero text and image
+        gsap.to(".reveal-hero-text", {
+          opacity: 1,
+          y: "0%",
+          duration: 0.8,
+          stagger: 0.5,
+        });
+    
+        gsap.to(".reveal-hero-img", {
+          opacity: 1,
+          y: "0%",
+          duration: 0.8,
+        });
+      }, []);
+
     return (
         <section className="relative flex min-h-[100vh] w-full max-w-[100vw] flex-col overflow-hidden max-lg:p-4 max-md:mt-[50px]">
             <div className="flex h-full min-h-[100vh] w-full justify-center gap-6 p-[5%] max-xl:items-center max-lg:flex-col">
                 {/* Left: Text */}
                 <div className="flex flex-col justify-center">
                     <div className="flex flex-wrap text-7xl font-semibold uppercase leading-[85px] max-lg:text-4xl max-md:leading-snug">
-                        <span className="bg-green-200 p-1 px-6">Hưng
-                        </span>
+                        <span className="bg-green-200 p-1 px-6">Hưng</span>
                         <br />
                         <span>Software. Data. ML </span>
                     </div>
