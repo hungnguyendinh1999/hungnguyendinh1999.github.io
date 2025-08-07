@@ -5,6 +5,8 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function useGsapReveal(options = {}) {
+  const { scrollTrigger = {}, animation = {} } = options;
+
   useEffect(() => {
     const sections = gsap.utils.toArray("section");
 
@@ -14,7 +16,7 @@ export default function useGsapReveal(options = {}) {
           trigger: section,
           start: "10% 80%",
           end: "20% 90%",
-          ...options.scrollTrigger,
+          ...scrollTrigger,
         },
       });
 
@@ -23,8 +25,8 @@ export default function useGsapReveal(options = {}) {
         y: "0%",
         duration: 0.8,
         stagger: 0.2,
-        ...options.animation,
+        ...animation,
       });
     });
-  }, []);
+  }, [scrollTrigger, animation]);
 }
